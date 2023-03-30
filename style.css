@@ -525,6 +525,18 @@ video {
   bottom: 0px;
 }
 
+.right-1\/2 {
+  right: 50%;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-1\/3 {
+  top: 33.333333%;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -533,6 +545,18 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[30vh\] {
+  height: 30vh;
 }
 
 .max-h-max {
@@ -544,17 +568,65 @@ video {
   min-height: 100vh;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/3 {
+  --tw-translate-y: -33.333333%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.animate-\[blink\] {
+  animation: blink;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .scroll-smooth {
   scroll-behavior: smooth;
 }
 
-.bg-blue-600 {
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.bg-green-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .py-4 {
@@ -566,9 +638,52 @@ video {
   text-align: center;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 @font-face {
@@ -594,6 +709,16 @@ video {
   padding: 0;
   box-sizing: border-box;
   font-family: vazir;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .selection\:bg-slate-800 *::-moz-selection {
@@ -634,4 +759,71 @@ video {
 .selection\:text-green-400::selection {
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.after\:mr-1::after {
+  content: var(--tw-content);
+  margin-right: 0.25rem;
+}
+
+.after\:animate-\[blink_\.5s_infinite_ease\]::after {
+  content: var(--tw-content);
+  animation: blink .5s infinite ease;
+}
+
+.after\:border-r-2::after {
+  content: var(--tw-content);
+  border-right-width: 2px;
+}
+
+.after\:border-white::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.after\:bg-white::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .phone\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .phone\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .phone\:w-\[84\%\] {
+    width: 84%;
+  }
+
+  .phone\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .tablet\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .tablet\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .tablet\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .tablet\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
